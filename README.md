@@ -2,7 +2,7 @@
 
 Run Claude Code inside a Docker container while controlling Chrome on your host machine.
 
-Python port of [claude-code-remote-chrome](https://github.com/badlogic/claude-code-remote-chrome).
+Python port of [claude-code-remote-chrome](https://github.com/vaclavpavek/claude-code-remote-chrome).
 
 ## What it does
 
