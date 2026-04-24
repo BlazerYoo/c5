@@ -10,5 +10,7 @@ services:
       - .env.local
     environment:
       - BRIDGE_PORT=9229
+    volumes:
+      - ${HOME}/Desktop/dev:/host
     stdin_open: true
     tty: true
