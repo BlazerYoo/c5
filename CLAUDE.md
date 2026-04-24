@@ -56,7 +56,7 @@ When `bridge_container.py` runs as a background process in `entrypoint.sh`, Ctrl
 | `bridge_host.py` | Host | TCP server, connects to real NMH socket |
 | `bridge_container.py` | Container | Unix socket listener, forwards to TCP host bridge |
 | `chrome_native_host.py` | Container | Placeholder NMH binary |
-| `entrypoint.sh` | Container | Credentials, chrome-native-host, bridge_container.py |
+| `entrypoint.sh` | Container | chrome-native-host setup, starts bridge_container.py |
 | `Dockerfile` | Build | node:20-slim + python3, Claude CLI, user matching host UID |
 | `docker-compose.yml` | Build | Sets env vars |
 | `Makefile` | Host | `up`, `shell` commands |
@@ -71,7 +71,7 @@ When `bridge_container.py` runs as a background process in `entrypoint.sh`, Ctrl
 | `BRIDGE_USER` | bridge_host.py | current username | Host socket directory name |
 | `BRIDGE_HOST` | bridge_host.py | `0.0.0.0` | TCP bind address |
 | `BRIDGE_SOCK_PATH` | bridge_container.py | set by entrypoint.sh | Unix socket path to create |
-| `CLAUDE_CREDENTIALS` | .env.local | — | OAuth JSON for ~/.claude/.credentials.json |
+| `CLAUDE_CODE_OAUTH_TOKEN` | .env.local | — | OAuth access token; read natively by Claude Code |
 
 ## Testing
 

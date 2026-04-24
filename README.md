@@ -30,13 +30,13 @@ bridge_container.py  --TCP:9229-->  bridge_host.py
 
 ## Setup
 
-1. **Create `.env.local`** with your credentials:
+1. **Create `.env.local`** with your OAuth token:
 
    ```
-   CLAUDE_CREDENTIALS={"claudeAiOauth":{"accessToken":"...","refreshToken":"...","expiresAt":...}}
+   CLAUDE_CODE_OAUTH_TOKEN=sk-ant-oat01-...
    ```
 
-   You can find these in `~/.claude/.credentials.json` on your host.
+   Get your token by running `claude setup-token` on your host, or copy the `accessToken` value from `~/.claude/.credentials.json`.
 
 2. **Build and start** the container:
 

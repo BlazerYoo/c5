@@ -1,11 +1,6 @@
 #!/bin/bash
 set -e
 
-if [ -n "$CLAUDE_CREDENTIALS" ]; then
-    mkdir -p ~/.claude
-    echo "$CLAUDE_CREDENTIALS" > ~/.claude/.credentials.json
-fi
-
 # Install fake chrome-native-host (expected by Claude Code, not used by MCP)
 mkdir -p ~/.claude/chrome
 cat > ~/.claude/chrome/chrome-native-host << 'EOF'
